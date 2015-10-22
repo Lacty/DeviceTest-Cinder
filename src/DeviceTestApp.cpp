@@ -1,5 +1,5 @@
 
-#include "cinder/app/AppCocoaTouch.h"
+#include "cinder/app/AppNative.h"
 #include "cinder/gl/gl.h"
 #include "../blocks/MotionManager/src/cinder/MotionImplCoreMotion.h"
 
@@ -7,7 +7,7 @@ using namespace ci;
 using namespace ci::app;
 using namespace std;
 
-class DeviceTestApp : public AppCocoaTouch {
+class DeviceTestApp : public AppNative {
 public:
   void setup();
   void mouseDown(MouseEvent event);
@@ -17,6 +17,7 @@ public:
 
 void DeviceTestApp::setup() {
   MotionManager::enable();
+  gl::enable(GL_CULL_FACE);
 }
 
 void DeviceTestApp::mouseDown(MouseEvent event) {}
@@ -31,8 +32,8 @@ void DeviceTestApp::draw() {
   gl::pushModelView();
   gl::translate(getWindowCenter());
   gl::rotate(MotionManager::getRotation());
-  gl::drawCube(Vec3f::zero(), Vec3f(100, 100, 100));
+  gl::drawColorCube(Vec3f::zero(), Vec3f(100, 100, 100));
   gl::popModelView();
 }
 
-CINDER_APP_COCOA_TOUCH( DeviceTestApp, RendererGl )
+CINDER_APP_NATIVE( DeviceTestApp, RendererGl )
