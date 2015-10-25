@@ -12,7 +12,7 @@ void Device::enable() {
 */
 
 ci::Quatf Device::getRotation() {
-#if !defined( _MSW_VER )
+#if !defined( _MSC_VER )
   return ci::MotionManager::getRotation();
 #else
   return ci::Quatf(0, 0, 0, 0);

@@ -4,7 +4,7 @@
 
 #include "cinder/Quaternion.h"
 
-#if !defined( _MSW_VER )
+#if !defined( _MSC_VER )
 #include "../blocks/MotionManager/src/cinder/MotionImplCoreMotion.h"
 #endif
 
