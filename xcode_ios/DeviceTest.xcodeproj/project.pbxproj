@@ -18,6 +18,7 @@
 		28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD15070DC6FC5B0079059D /* QuartzCore.framework */; };
 		9D2CF9FF0E4E42D0AA0D74A1 /* CinderApp_ios.png in Resources */ = {isa = PBXBuildFile; fileRef = 97ABC5FAA6BA4898A9E8D793 /* CinderApp_ios.png */; };
 		9DC49983392D461DB3878ECD /* DeviceTestApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 24DFBEACCD4842648B6E1028 /* DeviceTestApp.cpp */; };
+		AC09D7CE1BDCD6F300EB8C36 /* Device.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC09D7CD1BDCD6F300EB8C36 /* Device.cpp */; };
 		ACA49E851BD8CC4900289DF7 /* MotionImplCoreMotion.mm in Sources */ = {isa = PBXBuildFile; fileRef = ACA49E821BD8CC4900289DF7 /* MotionImplCoreMotion.mm */; };
 		ACA49E861BD8CC4900289DF7 /* MotionManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACA49E831BD8CC4900289DF7 /* MotionManager.cpp */; };
 		ACA49E881BD8CC7200289DF7 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACA49E871BD8CC7200289DF7 /* CoreMotion.framework */; };
@@ -45,6 +46,8 @@
 		823C9B1F13594DD2B15EB690 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97ABC5FAA6BA4898A9E8D793 /* CinderApp_ios.png */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; name = CinderApp_ios.png; path = ../resources/CinderApp_ios.png; sourceTree = "<group>"; };
 		A6D3888B6677429DBAB71167 /* DeviceTest_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; path = DeviceTest_Prefix.pch; sourceTree = "<group>"; };
+		AC09D7CC1BDCC50100EB8C36 /* Device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Device.h; path = ../src/Device.h; sourceTree = "<group>"; };
+		AC09D7CD1BDCD6F300EB8C36 /* Device.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Device.cpp; path = ../src/Device.cpp; sourceTree = "<group>"; };
 		ACA49E811BD8CC4900289DF7 /* MotionImplCoreMotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MotionImplCoreMotion.h; path = ../../cinder_0.8.6_mac/blocks/MotionManager/src/cinder/MotionImplCoreMotion.h; sourceTree = "<group>"; };
 		ACA49E821BD8CC4900289DF7 /* MotionImplCoreMotion.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MotionImplCoreMotion.mm; path = ../../cinder_0.8.6_mac/blocks/MotionManager/src/cinder/MotionImplCoreMotion.mm; sourceTree = "<group>"; };
 		ACA49E831BD8CC4900289DF7 /* MotionManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MotionManager.cpp; path = ../../cinder_0.8.6_mac/blocks/MotionManager/src/cinder/MotionManager.cpp; sourceTree = "<group>"; };
@@ -127,6 +130,8 @@
 		00692BD914FF149000D0A05E /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				AC09D7CD1BDCD6F300EB8C36 /* Device.cpp */,
+				AC09D7CC1BDCC50100EB8C36 /* Device.h */,
 				24DFBEACCD4842648B6E1028 /* DeviceTestApp.cpp */,
 			);
 			name = Source;
@@ -233,6 +238,7 @@
 				ACA49E851BD8CC4900289DF7 /* MotionImplCoreMotion.mm in Sources */,
 				ACA49E861BD8CC4900289DF7 /* MotionManager.cpp in Sources */,
 				9DC49983392D461DB3878ECD /* DeviceTestApp.cpp in Sources */,
+				AC09D7CE1BDCD6F300EB8C36 /* Device.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

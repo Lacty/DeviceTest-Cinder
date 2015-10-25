@@ -1,11 +1,13 @@
 
 #include "cinder/app/AppNative.h"
 #include "cinder/gl/gl.h"
-#include "../blocks/MotionManager/src/cinder/MotionImplCoreMotion.h"
+
+#include "Device.h"
 
 using namespace ci;
 using namespace ci::app;
 using namespace std;
+using namespace dowa;
 
 class DeviceTestApp : public AppNative {
 public:
@@ -16,14 +18,13 @@ public:
 };
 
 void DeviceTestApp::setup() {
-  MotionManager::enable();
   gl::enable(GL_CULL_FACE);
 }
 
 void DeviceTestApp::mouseDown(MouseEvent event) {}
 
 void DeviceTestApp::update() {
-  console() << MotionManager::getRotation() << std::endl;
+  console() << Device::getRotation() << std::endl;
 }
 
 void DeviceTestApp::draw() {
@@ -31,7 +32,7 @@ void DeviceTestApp::draw() {
   
   gl::pushModelView();
   gl::translate(getWindowCenter());
-  gl::rotate(MotionManager::getRotation());
+  gl::rotate(Device::getRotation());
   gl::drawColorCube(Vec3f::zero(), Vec3f(100, 100, 100));
   gl::popModelView();
 }
