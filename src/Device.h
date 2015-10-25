@@ -1,12 +1,10 @@
 
 #pragma once
 
-#define CINDER_MAC
-//#define CINDER_MSW
 
 #include "cinder/Quaternion.h"
 
-#if !defined( CINDER_MSW )
+#if !defined( _MSW_VER )
 #include "../blocks/MotionManager/src/cinder/MotionImplCoreMotion.h"
 #endif
 
