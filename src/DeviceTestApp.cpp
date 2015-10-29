@@ -19,6 +19,7 @@ public:
 
 void DeviceTestApp::setup() {
   gl::enable(GL_CULL_FACE);
+  Device::enable();
 }
 
 void DeviceTestApp::mouseDown(MouseEvent event) {}

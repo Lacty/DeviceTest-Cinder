@@ -3,16 +3,15 @@
 
 using namespace dowa;
 
-/*
+
 void Device::enable() {
-#if !defined( CINDER_MSW )
-  ci::MotionManager::enable();
+#if defined( CINDER_COCOA_TOUCH )
+  return ci::MotionManager::enable();
 #endif
 }
-*/
 
 ci::Quatf Device::getRotation() {
-#if !defined( _MSC_VER )
+#if defined( CINDER_COCOA_TOUCH )
   return ci::MotionManager::getRotation();
 #else
   return ci::Quatf(0, 0, 0, 0);
